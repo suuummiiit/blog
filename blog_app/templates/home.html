@@ -15,6 +15,7 @@
             <p>by {{ post.author }} ({{ post.author.first_name }} {{ post.author.last_name }}) - {{ post.author.email }}</p>
 
             <a href="{% url 'update_post' post.pk %}" class="btn btn-secondary">Edit Post</a>
+            <a href="{% url 'delete_post' post.pk %}" class="btn btn-secondary">Delete Post</a>
         </li>
         <br>
         {% endfor %}
