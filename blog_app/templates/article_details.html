@@ -10,8 +10,10 @@
     <small>By: {{ post.author.first_name }} {{ post.author.last_name }}</small>
     <hr>
     <br>
-    {{ post.body }}
+    <!-- {{ post.body }} -->
+    {{ post.body|linebreaks }}
 
     <br><br>
     <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+    <a href="{% url 'update_post' post.pk %}" class="btn btn-secondary">Edit Post</a>
 {% endblock %}
