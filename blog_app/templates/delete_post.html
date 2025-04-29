@@ -6,12 +6,12 @@
 
 {% block content %}
 
-    <h1>Delete {{ Post.title }}</h1>  
+    <h1>Delete {{ post.title }}</h1>  
     
     <br><br>
     <div class="container">
         <div class="form-group">
-            <form method="POST"">
+            <form method="POST">
                 {% csrf_token %}
                 <strong>Are you sure about that?!</strong>
                 <br>
