@@ -17,10 +17,11 @@
                 <br>
                 {{ post.post_datetime }}
             </small>
+            {% if user.is_authenticated %}
             <br><br>
-
             <a href="{% url 'update_post' post.pk %}" class="btn btn-secondary">Edit Post</a>
             <a href="{% url 'delete_post' post.pk %}" class="btn btn-secondary">Delete Post</a>
+            {% endif %}
         </li>
         <br>
         {% endfor %}
