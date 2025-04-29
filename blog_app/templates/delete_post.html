@@ -6,6 +6,7 @@
 
 {% block content %}
 
+    {% if user.is_authenticated %}
     <h1>Delete {{ post.title }}</h1>  
     
     <br><br>
@@ -19,5 +20,8 @@
             </form>
         </div>
     </div>
+    {% else %}
+    <p style="font-size: xx-large;">403 Forbidden</p>
+    {% endif %}
     
 {% endblock %}
